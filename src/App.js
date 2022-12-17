@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './Components/Header.jsx';
+import Main from './Components/Main.jsx';
+import Footer from './Components/Footer.jsx';
+import Catalog from './Components/Katalog.jsx';
+import {BrowserRouter,Routes, Route} from 'react-router-dom';
+import {Button, Badge} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+<div className="wraper">
+<div className="appwraper">
 
+  <BrowserRouter>
+  <Header />
+
+  <Routes>
+     <Route path="/katalog" render={()=><Catalog/>}/>     
+  </Routes>
+  </BrowserRouter>
+          </div>
+  <Main />
+
+
+<Footer />
+</div>
+
+  )
+}
 export default App;
