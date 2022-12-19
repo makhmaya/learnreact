@@ -4,6 +4,10 @@ width:100%;
 object-fit:fill;
 
 }
+a{
+  text-decoration:none;
+  color:inherit;
+}
 h1,h2,h3,h4{
   font-weight:700;
 }
@@ -174,7 +178,7 @@ select{
   margin-bottom:64px;
 }
 .card__item{
-  width:440px;
+  width:400px;
   min-height:499px;
   padding:25px;
   border:1px solid #e1e1e1;
@@ -763,6 +767,7 @@ margin:30px 0 40px 0;
 }
 .about {
   DISPLAY:FLEX;
+  gap:30px;
 padding-top:80px;
 }
 .about p a{
@@ -797,4 +802,18 @@ footer{
   background:#262626;
   border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+}
+.nav__link-active{
+  color:#CA0100;
+  font-weight:700;
+    text-decoration:none;
+    padding-bottom:5px;
+  border-bottom:2px solid #CA0100;
+  transition: 0.5s ease;
+}
+.nav__link-not{
+  color:#262626;
+    font-weight:700;
+    text-decoration:none;
+      transition: 0.5s ease;
 }
